@@ -26,7 +26,6 @@ My goal is to find a job that will not only immerse me in the exciting and progr
 	//Components
 	import Search from './editModal.js';
 	import DollsList from './DollsList.js';
-
 	const mapStateToProps = ({ dolls }) => ({ dolls });
 	const mapDispatchToProps = dispatch => {
 	  return {
@@ -35,25 +34,19 @@ My goal is to find a job that will not only immerse me in the exciting and progr
 	  }
 	};
 	class CatalogueCom extends Component {
-
 	  constructor(props) {
 		super(props);
 		this.state = {
-		  /*dolls: null,*/
-
 		  searchValue: null
 		}
 	  }
-
 	  componentDidMount() {
 		const dollsInCatalogue =  this.fetchDolls();
 		console.log('dollsInCatalogue', dollsInCatalogue);
 	  }
-
 	  async fetchDolls() {
 		return await this.props.fetchDolls();
 	  }
-
 	  render() {
 		console.log('current props Catalogue', this.props);
 		return (
@@ -65,9 +58,7 @@ My goal is to find a job that will not only immerse me in the exciting and progr
 		  </div>
 		)
 	  }
-
 	}
-
 	export default connect (
 	  mapStateToProps,
 	  mapDispatchToProps
