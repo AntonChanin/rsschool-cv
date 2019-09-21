@@ -3,11 +3,27 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  max-width: 1024px;
+  max-width: 1007px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid #eaecef;
+  padding: 1em;
 }
 
-.contact-Info .phone {
+.contact-Info  {
   padding-top: 0.5em;
+}
+pre {
+  background-color: #f6f8fa;
+}
+h3 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+.cv-Photo {
+  width: 748px; 
+  height: 940px;
+  text-align:center;
+  display:block;
+  margin:0 auto;
 }
