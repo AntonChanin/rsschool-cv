@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>cv</title>
+    <link href="./style.css"  rel="stylesheet" >
+  </head>
+  <body>
+    <h1>CV</h1>
+    <h3>1. Anton Hanin </h3> 
+    <h3> 2. Contact information:</h3>
+    <div>
+      <div class="contact-Info">
+        <strong> contact mail:</strong>
+        <a href="https://mail.google.com/mail/u/0/?pli=1#inbox">antonchaninvl@gmail.com</a><br>
+      </div>
+     <div class="contact-Info">
+       <strong>contact phone:</strong>
+       <span>79168232949</span>
+     </div>
+    </div>
+    <h3>3. Summary:</h3>  
+    <div>
+      My goal is to find a job that will not only immerse me in the exciting and progressive world of IT, but also provide a good financial position and prestige.
+      I would like this work to provide an opportunity for self-development in the field of IT and related areas associated with the development of their creative potential,
+      internal and external discipline and technical skills.
+    </div>
+    <h3>4. Skills:</h3> 
+    <ul>
+      <li>pascal</li>
+      <li>delphi 7</li>
+      <li>js</li>
+      <li>jquery</li>
+      <li>css</li>
+      <li>html</li>
+      <li>git</li>
+      <li>bitbucket</li>
+      <li>joomle</li>
+      <li>react</li>
+      <li>redux</li>
+      <li>java</li>
+    </ul>
+    <h3>5. Code example:</h3> 
+    <pre>
+      <code> 
+        import React, {Component} from 'react';<br>
+        import { connect } from 'react-redux';<br>
+        import { fetchDolls } from '../../redux/dolls/actions.js';<br>
+        import Search from './editModal.js';<br>
+        import DollsList from './DollsList.js';<br>
+        const mapStateToProps = ({ dolls }) => ({ dolls });<br>
+        const mapDispatchToProps = dispatch => {<br>
+	      return {<br>
+            // dispatching actions returned by action creators<br>
+	        fetchDolls: () => dispatch(fetchDolls())<br>
+	      }<br>
+        };<br>
+        class CatalogueCom extends Component {<br>
+	      constructor(props) {<br>
+	        super(props);<br>
+	        this.state = {<br>
+	          searchValue: null<br>
+	        }<br>
+	      }<br>
+	      componentDidMount() {<br>
+	        const dollsInCatalogue =  this.fetchDolls();<br>
+	        console.log('dollsInCatalogue', dollsInCatalogue);<br>
+	      }<br>
+	      async fetchDolls() {<br>
+	        return await this.props.fetchDolls();<br>
+	      }<br>
+	      render() {<br>
+	        console.log('current props Catalogue', this.props);<br>
+	        return (<br>
+		      <<span>div </span> className="cont-pad"><br>
+		        <<span>Search</span> type="text" categoryThis={this} /><br>
+		        <<span>div </span> className="scroll-cataloge"><br>
+			      <<span>DollsList </span> dolls={[]} searchValue={this.state.searchValue}/><br>
+		        <<span>/div></span><br>
+		      <<span>/div></span><br>
+	        )<br>
+	      }<br>
+        }<br>
+        export default connect (<br>
+	      mapStateToProps,<br>
+	      mapDispatchToProps<br>
+        )(CatalogueCom);<br>
+      </code>
+    </pre>
+    <h3>6. Experience:</h3> 
+    <ul>
+      <li>
+         Graduation thesis: Development of the client part of the unified authentication and authorization system
+         for the unified information and educational environment (front-end)
+      </li>
+      <li>Industrial practice in EPAM</li>
+    </ul> 
+    <h3>7. Education:</h3> 
+    <ul>
+      <li>secondary school</li>
+      <li>SP branch of VGIK secondary vocational education. qualification technician-programmer</li>
+      <li>
+        Udemy courses:
+        <ul>
+          <li><a href="https://www.udemy.com/certificate/UC-9BA2HGB5/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email">Web Development By Doing: HTML / CSS</a></li>
+          <li><a href="https://www.udemy.com/certificate/UC-97KYO95J/">Foundations of Front-End Web Development</a></li>
+          <li><a href="https://www.udemy.com/certificate/UC-WOEBP1DV/">Master the Basics of HTML5 & CSS3: Beginner Web Development</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h3>8. English: </h3>
+    <ul>
+      <li>school classes</li>
+      <li>as well as classes in this discipline in Sergiev-Posad branch of VGIK</li>
+    </ul>
+    <h3>9. My photo:</h3>
+    <img class="cv-Photo" title="My photo" src="./Caser.png">
+  </body>
+</html>

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1007px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #eaecef;
+  padding: 1em;
+}
+
+.contact-Info  {
+  padding-top: 0.5em;
+}
+pre {
+  background-color: #f6f8fa;
+}
+h3 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+.cv-Photo {
+  width: 748px; 
+  height: 940px;
+  text-align:center;
+  display:block;
+  margin:0 auto;
+}
